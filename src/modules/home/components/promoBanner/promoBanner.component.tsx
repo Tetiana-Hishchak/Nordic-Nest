@@ -1,3 +1,4 @@
+import React from "react";
 import { box } from "./promoBanner.styles";
 
 const PromoBanner = () => {

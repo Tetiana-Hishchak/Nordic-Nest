@@ -1,3 +1,4 @@
+import React from "react";
 import { box, content } from './nostalgia.styles';
 import nostalgia from '~/assets/nostalgia.png';
 

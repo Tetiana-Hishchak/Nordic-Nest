@@ -4,21 +4,30 @@ import svgr from 'vite-plugin-svgr';
 import { ViteAliases } from 'vite-aliases';
 import EnvironmentPlugin from 'vite-plugin-environment';
 
-// https://vitejs.dev/config/
 export default defineConfig({
-	plugins: [
-		react(),
-		svgr({
-			// svgr options: https://react-svgr.com/docs/options/
-			svgrOptions: {
-				exportType: 'default',
-				ref: true,
-				svgo: false,
-				titleProp: true,
-			},
-			include: '**/*.svg',
-		}),
-		ViteAliases(),
-		EnvironmentPlugin('all'),
-	],
+  plugins: [
+    react(),
+    svgr({
+      svgrOptions: {
+        exportType: 'default',
+        ref: true,
+        svgo: false,
+        titleProp: true,
+      },
+      include: '**/*.svg',
+    }),
+    ViteAliases(),
+    EnvironmentPlugin('all'),
+  ],
+  optimizeDeps: {
+    esbuildOptions: {
+      target: 'esnext',
+    },
+  },
+  build: {
+    target: 'esnext',
+    minify: 'esbuild',
+    sourcemap: true,
+  },
 });
+

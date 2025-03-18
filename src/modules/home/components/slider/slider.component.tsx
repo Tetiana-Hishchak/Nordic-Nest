@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import Slider from 'react-slick';
 import Slide1 from '~/assets/slider1.png';
 import Slide2 from '~/assets/slider2.png';

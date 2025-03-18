@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from 'react';
 import heartIcon from '~assets/icon-heart-dark.svg?url';
 import {

@@ -1,8 +1,18 @@
 {
 	"compilerOptions": {
+		"target": "ESNext",
+		"lib": [
+			"ESNext",
+			"DOM"
+		],
+		"module": "ESNext",
+		"moduleResolution": "node",
 		"esModuleInterop": true,
-		"baseUrl": ".",
+		"skipLibCheck": true,
+		"strict": true,
 		"jsx": "react-jsx",
+		"resolveJsonModule": true,
+		"baseUrl": ".",
 		"paths": {
 			"~assets/*": [
 				"src/assets/*"
@@ -32,5 +42,13 @@
 				"src/modules/ai/*"
 			]
 		}
-	}
+	},
+	"include": [
+		"src",
+		"src/types/global.d.ts"
+	],
+	"exclude": [
+		"node_modules",
+		"dist"
+	]
 }

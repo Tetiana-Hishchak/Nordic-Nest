@@ -1,3 +1,4 @@
+import React from "react";
 import Button from '~shared/components/button/button.component';
 import { box, button, heading, text } from './text.styles';
 

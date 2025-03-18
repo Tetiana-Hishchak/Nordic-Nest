@@ -1,3 +1,4 @@
+import React from "react";
 import { useThemeStore } from '~shared/stores/theme.store';
 import { input, search, searchIcon } from './searchbar.styles';
 import SearchIcon from '~/assets/icon-search.svg';

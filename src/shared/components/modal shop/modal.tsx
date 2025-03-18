@@ -1,3 +1,4 @@
+import React from "react";
 import { modalContent, modalOverlay } from "./modal.styles";
 
 interface ModalProps {

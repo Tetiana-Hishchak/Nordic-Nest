@@ -21,10 +21,13 @@ const App = (): React.ReactNode => {
 	}, [pathname]);
 
 	const [isModalOpen, setIsModalOpen] = React.useState(false);
-	const modalRef = React.useRef(null);
+	const modalRef = React.useRef<HTMLDivElement | null>(null);
 
-	const handleOutsideClick = (event) => {
-		if (modalRef.current && !modalRef.current.contains(event.target)) {
+	const handleOutsideClick = (event: MouseEvent) => {
+
+		if (modalRef.current && event.target instanceof Node && !modalRef.current.contains(event.target)) {
+
+
 			setIsModalOpen(false);
 		}
 	};
